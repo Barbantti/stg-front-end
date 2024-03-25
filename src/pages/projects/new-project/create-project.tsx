@@ -110,6 +110,7 @@ const CreateProject = () => {
         const response = await createNewProject(formData, newUserToken);
 
         if (response) {
+          setIsLoading(false);
           toast({
             title: "Sucesso",
             description: "Projeto criado com sucesso.",
